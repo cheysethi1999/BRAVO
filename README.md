@@ -1,6 +1,8 @@
 # Homepage: github.com/cheysethi1999/BRAVO
 # Author: BRAVO_IT
 
+# Setup a SOCKS5 proxy in a single command by BRAVO_IT
+
 
 
 <h1 id="socks5">socks5</h1>
