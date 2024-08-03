@@ -84,6 +84,7 @@ function print_config() {
 	echo "URL: ss://$( generate_hash chacha20-ietf-poly1305 $1 )@$( get_external_address ):$2"
 	echo "Android client: https://play.google.com/store/apps/details?id=com.github.shadowsocks"
 	echo "Clients for other devices: https://shadowsocks.org/en/download/clients.html"
+	echo "Any question contact telegram @BRAVO_IT"
 }
 
 IFACE=$(ip route get 8.8.8.8 | head -1 | cut -d' ' -f5)
@@ -103,6 +104,7 @@ if [ "$DISTRIB_ID $DISTRIB_CODENAME" = "Ubuntu xenial" ]; then
 	apt-add-repository -y ppa:max-c-lv/shadowsocks-libev
 	apt update
 	apt install -y shadowsocks-libev
+	systemctl start firewalld
 
 	# package does not create config directory :(
 	mkdir -p /etc/shadowsocks-libev
@@ -120,6 +122,7 @@ elif [ "$DISTRIB_ID $DISTRIB_CODENAME" = "Ubuntu bionic" ]; then
 
 	apt update
 	apt install -y shadowsocks-libev
+	systemctl start firewalld
 
 	# package does not create config directory :(
 	mkdir -p /etc/shadowsocks-libev
@@ -137,6 +140,7 @@ elif [ "$ID $VERSION_CODENAME" = "ubuntu focal" ]; then
 
 	apt update
 	apt install -y shadowsocks-libev
+	systemctl start firewalld
 
 	generate_config_v2 /etc/shadowsocks-libev/config.json "$PORT" "$PASSWORD"
 
@@ -161,6 +165,7 @@ elif [[ "$ID $VERSION_ID" == "centos 7"* || "$ID $VERSION_ID" == "rhel 7"* ]]; t
 
 	generate_config /etc/shadowsocks-libev/config.json "$PORT" "$PASSWORD"
 
+	systemctl start firewalld
 	systemctl daemon-reload
 	systemctl enable shadowsocks-libev
 	systemctl restart shadowsocks-libev
@@ -177,6 +182,7 @@ else
 	echo "- Ubuntu 20.04 Focal"
 	echo "- CentOS 7"
 	echo "- RHEL 7"
+	echo "Any question contact telegram @BRAVO_IT"
 	exit 1
 
 fi
