@@ -165,6 +165,7 @@ if [ "$DISTRIB_ID $DISTRIB_CODENAME" = "Ubuntu xenial" ]; then
 
 	apt update
 	apt install -y dante-server libpam-pwdfile openssl
+	systemctl start firewalld
 
 	generate_password_file /etc/danted.passwd "$USER" "$PASSWORD"
 
@@ -181,12 +182,15 @@ if [ "$DISTRIB_ID $DISTRIB_CODENAME" = "Ubuntu xenial" ]; then
 	echo "Port: $PORT"
 	echo "User: $USER"
 	echo "Password: $PASSWORD"
+	echo "Any question contact telegram @BRAVO_IT"
 
 # Ubuntu 18.04 Bionic
 elif [ "$DISTRIB_ID $DISTRIB_CODENAME" = "Ubuntu bionic" ]; then
 
 	apt update
 	apt install -y dante-server libpam-pwdfile openssl
+	systemctl start firewalld
+
 
 	generate_password_file /etc/danted.passwd "$USER" "$PASSWORD"
 
@@ -203,12 +207,15 @@ elif [ "$DISTRIB_ID $DISTRIB_CODENAME" = "Ubuntu bionic" ]; then
 	echo "Port: $PORT"
 	echo "User: $USER"
 	echo "Password: $PASSWORD"
+	echo "Any question contact telegram @BRAVO_IT"
 
 # Ubuntu 20.04 Focal
 elif [ "$ID $VERSION_CODENAME" = "ubuntu focal" ]; then
 
 	apt update
 	apt install -y dante-server libpam-pwdfile openssl
+	systemctl start firewalld
+
 
 	generate_password_file /etc/danted.passwd "$USER" "$PASSWORD"
 
@@ -225,6 +232,7 @@ elif [ "$ID $VERSION_CODENAME" = "ubuntu focal" ]; then
 	echo "Port: $PORT"
 	echo "User: $USER"
 	echo "Password: $PASSWORD"
+	echo "Any question contact telegram @BRAVO_IT"
 
 # CentOS 7 and Oracle Linux 7.5
 elif [ "$ID $VERSION_ID" = "ol 7.5" -o "$ID $VERSION_ID" = "centos 7" ]; then
@@ -247,6 +255,8 @@ elif [ "$ID $VERSION_ID" = "ol 7.5" -o "$ID $VERSION_ID" = "centos 7" ]; then
 
 	generate_systemd_file /etc/systemd/system/sockd.service
 
+	systemctl start firewalld
+
 	systemctl daemon-reload
 
 	systemctl enable sockd.service
@@ -258,6 +268,7 @@ elif [ "$ID $VERSION_ID" = "ol 7.5" -o "$ID $VERSION_ID" = "centos 7" ]; then
 	echo "Port: $PORT"
 	echo "User: $USER"
 	echo "Password: $PASSWORD"
+	echo "Any question contact telegram @BRAVO_IT"
 
 else
 
@@ -269,6 +280,7 @@ else
 	echo "- Ubuntu 20.04 Focal"
 	echo "- Oracle Linux 7.5"
 	echo "- Centos 7"
+	echo "Any question contact telegram @BRAVO_IT"
 	exit 1
 
 fi
