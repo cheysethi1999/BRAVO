@@ -1,6 +1,6 @@
 #!/bin/bash
-# Homepage: selivan.github.io/socks
-# Author: Pavel Selivanov
+# Homepage: github.com/cheysethi1999/BRAVO
+# Author: BRAVO_IT
 # Contributors: Vlad Safronov (Oracle Linux 7.5, Centos 7)
 
 function get_external_address() {
