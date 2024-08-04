@@ -59,9 +59,32 @@ auth_param basic children 5
 auth_param basic realm Squid Basic Authentication
 auth_param basic credentialsttl 5 hours
 acl password proxy_auth REQUIRED
-http_access allow password
-<p>Go access list</p>
-http_access allow lan
-</code></p>
+http_access allow password</code></p>
+<p>4. Add this command to access list</p>
+<p><code class="language-plaintext highligter-rouge">http_access allow lan</code></p>
+<p>5. Add this commnad to the end off config file</p>
+<p><code class="language-plaintext highligter-rouge">#Add Follows To The end
+request_header_access Referer deny all
+request_header_access X-Forwarded-For deny all
+request_header_access Via deny all
+request_header_access Cache-Control deny all
+#Do not display IP address
+forwarded_for off</code></p>
+<p>6. Create user/pass for client</p>
+<p><code class="language-plaintext highligter-rouge">htpasswd -c /etc/squid/.htpasswd vpnuser</code></p>
+<p>Start Squid and Enable</p>
+<p><code class="language-plaintext highligter-rouge">systemctl start squid && systemctl enable squid</code></p>
+<p>7. Turn on firewall</p>
+<p><code class="language-plaintext highligter-rouge">systemctl start firewalld
+systemctl status firewalld</code></p>
+<p>8. Reload firewall and tcp port</p>
+<p><code class="language-plaintext highligter-rouge">firewall-cmd --zone=public --add-port=3128/tcp --permanent && firewall-cmd --reload</code></p>
+<p>9. Check Squid status and Connection</p>
+<p><code class="language-plaintext highligter-rouge">systemctl status squid
+tail -f /var/log/squid/access.log</code></p>
+
+<p>That's all enjoy your http proxy</p>
+
+
 
  
