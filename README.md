@@ -1,9 +1,7 @@
-# Homepage: github.com/cheysethi1999/BRAVO
+
 # Author: BRAVO_IT
 
 # Setup a SOCKS5 proxy in a single command by BRAVO_IT
-
-
 
 <h1 id="socks5">socks5</h1>
 <p><code class="language-plaintext highlighter-rouge">curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/socks.txt | sudo bash</code></p>
