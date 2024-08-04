@@ -54,9 +54,14 @@ curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/shadowsocks.tx
 <p><code class="language-plaintext highlighter-rouge">vim /etc/squid/squid.config</code></p>
 <p>3. Config follow this command line</p>
 <p><code class="language-plaintext highligter-rouge">acl lan src all
-auth_param basic program /usr/lib64/squid/basic_ncsa_auth
-/etc/squid/.htpass
+auth_param basic program /usr/lib64/squid/basic_ncsa_auth /etc/squid/.htpasswd
 auth_param basic children 5
-auth_param basic realm squid basic authentication</p>
- 
+auth_param basic realm Squid Basic Authentication
+auth_param basic credentialsttl 5 hours
+acl password proxy_auth REQUIRED
+http_access allow password
+<p>Go access list</p>
+http_access allow lan
+</code></p>
+
  
