@@ -85,6 +85,13 @@ tail -f /var/log/squid/access.log</code></p>
 
 <p>That's all enjoy your http proxy</p>
 
+ <h1 id="Contact me">Contact me</h1>
+<ul>
+  <li>Telegram: <a href="https://t.me/BRAVO_IT">BRAVO_IT</a></li>
+  <li>Youtube: <a href="https://youtube.com/@littleskill168?si=VEru_lzwOXJg5Wk9">Littleskill</a></li>
+</ul>
+
+
 
 
  
