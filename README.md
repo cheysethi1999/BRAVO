@@ -46,3 +46,17 @@ curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/shadowsocks.tx
   <li>Ubuntu 18.04 Bionic</li>
   <li>CentOS 7 and RHEL 7 (thanks to Octavian Dodita octavian2204[anti-spam-dog]gmail.com )</li>
 </ul>
+ <h1 id="HTTP Proxy">HTTP Proxy</h1>
+ <p>Set up squid server in Centos 7 follow command below:</p>
+ <p>1. command line Install squid</p>
+ <p><code class="language-plaintext highlighter-rouge">yum -y install squid httpd-tools</code></p>
+<p>2. command line go config file</p>
+<p><code class="language-plaintext highlighter-rouge">vim /etc/squid/squid.config</code></p>
+<p>3. Config follow this command line</p>
+<p><code class="language-plaintext highligter-rouge">acl lan src all
+auth_param basic program /usr/lib64/squid/basic_ncsa_auth
+/etc/squid/.htpass
+auth_param basic children 5
+auth_param basic realm squid basic authentication</p>
+ 
+ 
