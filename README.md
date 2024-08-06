@@ -116,6 +116,11 @@ systemctl start systemd-timesyncd.service
 systemctl status chronyd.service
 systemctl status ntp.service</code></p>
 
+<h1>Install OPENVPN Server a single command by <a href="https://github.com/yeasin989/OPEN-VPN-ACCESS-SERVER.git">yeasin989</h1>
+<p>1 Openvpn free 1024 client</p>
+<p><code class="language-plaintext highligter-rouge">cd /tmp/ && yum install git -y && git clone https://github.com/yeasin989/OPEN-VPN-ACCESS-SERVER.git && cd OPEN-VPN-ACCESS-SERVER/ && sed -i -e 's/\r$//' centos7.sh && chmod 755 centos7.sh && ./centos7.sh</code></p>
+Thank You.
+
  <h1 id="Contact me">Contact me</h1>
 <ul>
   <li>Telegram: <a href="https://t.me/BRAVO_IT">BRAVO_IT</a></li>
