@@ -12,7 +12,7 @@ alt="https://t.me/BRAVO_IThttps://t.me/BRAVO_IT" height="30" width="35" /></a>
 alt="https://www.tiktok.com/@littleskillcomputer?_t=8oeVIoRfhoa&_r=1" height="30" width="35" /></a>
 </p>
 <h3 align="left">Direct link below</h3>
-<a href="https://github.com/cheysethi1999/BRAVO/blob/master/images/socks.png" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/socks.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/images/socks.png"/></a>
+<a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#install-socks-a-single-command-line-" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/socks.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#install-socks-a-single-command-line-"/></a>
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png"/></a>
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#shadowsocks" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/shadowsocks.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#shadowsocks"/></a>
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/images/l2tp.png" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/l2tp.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/images/l2tp.png"/></a>
