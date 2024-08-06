@@ -1,7 +1,12 @@
 
-# Author: BRAVO_IT
+<h1 align="center">Hi 👋, I'm BRAVO_IT</h1>
+<h3 align="center">Network Engineer from Cambodia</h3>
 
-# Setup a SOCKS5 proxy in a single command by BRAVO_IT
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://fb.com/https://github.com/cheysethi1999/bravo.git" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://github.com/cheysethi1999/bravo.git" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/https://youtu.be/xdqzmv6ck_a?si=6oshn0pw0g78dy7b" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://youtu.be/xdqzmv6ck_a?si=6oshn0pw0g78dy7b" height="30" width="40" /></a>
+</p>
 
 <h1 id="socks5">socks5</h1>
 <p><code class="language-plaintext highlighter-rouge">curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/socks.txt | sudo bash</code></p>
