@@ -83,7 +83,7 @@ tail -f /var/log/squid/access.log</code></p>
 
 <p>That's all enjoy your http proxy</p>
 
-<h1>L2TP Server by <a href="i@teddysun.com">teddysun</a></h1>
+<h1>L2TP Server by <a href="https://github.com/teddysun">teddysun</a></h1>
 <p>1. Install l2tp server </p>
 <p><code class="language-plaintext highligter-rouge">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/l2tp.sh</code></p>
 <p>2. Change to executable right restriction</p>
