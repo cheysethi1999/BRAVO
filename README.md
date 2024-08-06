@@ -92,9 +92,9 @@ tail -f /var/log/squid/access.log</code></p>
 <p><code class="language-plaintext highligter-rouge">./l2tp.sh</code></p>
 <p>If you want to modify user settings, please use below command(s):</p>
 <p><code class="language-plaintext highligter-rouge">l2tp -a </code>(Add a user)</p>
-<p><code class="language-plaintext highligter-rouge">l2tp -d (Delete a user)</code></p>
-<p><code class="language-plaintext highligter-rouge">l2tp -l (List all users)</code></p>
-<p><code class="language-plaintext highligter-rouge">l2tp -m (Modify a user password)</code></p>
+<p><code class="language-plaintext highligter-rouge">l2tp -d </code>(Delete a user)</p>
+<p><code class="language-plaintext highligter-rouge">l2tp -l </code>(List all users)</p>
+<p><code class="language-plaintext highligter-rouge">l2tp -m </code>(Modify a user password)</p>
  <h1 id="Contact me">Contact me</h1>
 <ul>
   <li>Telegram: <a href="https://t.me/BRAVO_IT">BRAVO_IT</a></li>
