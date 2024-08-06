@@ -95,6 +95,29 @@ tail -f /var/log/squid/access.log</code></p>
 <p><code class="language-plaintext highligter-rouge">l2tp -d </code>(Delete a user)</p>
 <p><code class="language-plaintext highligter-rouge">l2tp -l </code>(List all users)</p>
 <p><code class="language-plaintext highligter-rouge">l2tp -m </code>(Modify a user password)</p>
+
+<h1>MTPROXY install in Ubuntu</h1>
+<p>1. Update </p>
+<p><code class="language-plaintext highligter-rouge">apt update
+apt install apt-transport-https ca-certificates curl software-properties-common</code></p>
+<p>2. Install DOCKER</p>
+<p><code class="language-plaintext highligter-rouge">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+apt install docker-ce
+apt install docker-compose-plugin
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh</code></p>
+<p>If error please install NTP command below</p>
+<p><code class="language-plaintext highligter-rouge">apt install systemd-timesyncd
+timedatectl set-ntp true
+systemctl unmask systemd-timesyncd.service</code></p>
+<p>Then you can enable and start the service:</p>
+<p><code class="language-plaintext highligter-rouge">
+systemctl enable systemd-timesyncd.service
+systemctl start systemd-timesyncd.service</code></p>
+
+systemctl status chronyd.service
+systemctl status ntp.service
+
  <h1 id="Contact me">Contact me</h1>
 <ul>
   <li>Telegram: <a href="https://t.me/BRAVO_IT">BRAVO_IT</a></li>
