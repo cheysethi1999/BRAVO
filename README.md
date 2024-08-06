@@ -113,10 +113,9 @@ systemctl unmask systemd-timesyncd.service</code></p>
 <p>Then you can enable and start the service:</p>
 <p><code class="language-plaintext highligter-rouge">
 systemctl enable systemd-timesyncd.service
-systemctl start systemd-timesyncd.service</code></p>
-
+systemctl start systemd-timesyncd.service
 systemctl status chronyd.service
-systemctl status ntp.service
+systemctl status ntp.service</code></p>
 
  <h1 id="Contact me">Contact me</h1>
 <ul>
