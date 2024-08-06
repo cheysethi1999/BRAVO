@@ -10,7 +10,7 @@
 alt="https://t.me/BRAVO_IThttps://t.me/BRAVO_IT" height="30" width="35" /></a>
 </p>
 <h3 align="left">Direct link below</h3>
-<a href="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png" height="30" width="40" /></a>
+<a href="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png"/></a>
 
 <h1 id="socks5">install socks a single command line </h1>
 <p><code class="language-plaintext highlighter-rouge">curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/socks.txt | sudo bash</code></p>
