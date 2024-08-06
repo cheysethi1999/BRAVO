@@ -8,6 +8,8 @@
 <a href="https://www.youtube.com/c/https://youtu.be/xdqzmv6ck_a?si=6oshn0pw0g78dy7b" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://youtu.be/xdqzmv6ck_a?si=6oshn0pw0g78dy7b" height="30" width="40" /></a>
 <a href="https://t.me/BRAVO_IT"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png?20220101141644"
 alt="https://t.me/BRAVO_IThttps://t.me/BRAVO_IT" height="30" width="35" /></a>
+<a href="https://www.tiktok.com/@littleskillcomputer?_t=8oeVIoRfhoa&_r=1"><img align="center" src="https://iconape.com/wp-content/files/nw/110905/svg/tiktok-logo-tik-tok-logo-icon-png-svg.png"
+alt="https://www.tiktok.com/@littleskillcomputer?_t=8oeVIoRfhoa&_r=1" height="30" width="35" /></a>
 </p>
 <h3 align="left">Direct link below</h3>
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/images/socks.png" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/socks.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/images/socks.png"/></a>
