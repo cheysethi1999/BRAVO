@@ -83,6 +83,18 @@ tail -f /var/log/squid/access.log</code></p>
 
 <p>That's all enjoy your http proxy</p>
 
+<h1>L2TP Server by <a href="i@teddysun.com" teddysun</h1>
+<p>1. Install l2tp server </p>
+<p><code class="language-plaintext highligter-rouge">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/l2tp.sh</code></p>
+<p>2. Change to executable right restriction</p>
+<p><code class="language-plaintext highligter-rouge">chmod +x l2tp.sh</code></p>
+<p>3. Execute installation script</p>
+<p><code class="language-plaintext highligter-rouge">./l2tp.sh</code></p>
+<p>If you want to modify user settings, please use below command(s):</p>
+<p><code class="language-plaintext highligter-rouge">l2tp -a (Add a user)</code></p>
+<p><code class="language-plaintext highligter-rouge">l2tp -d (Delete a user)</code></p>
+<p><code class="language-plaintext highligter-rouge">l2tp -l (List all users)</code></p>
+<p><code class="language-plaintext highligter-rouge">l2tp -m (Modify a user password)</code></p>
  <h1 id="Contact me">Contact me</h1>
 <ul>
   <li>Telegram: <a href="https://t.me/BRAVO_IT">BRAVO_IT</a></li>
