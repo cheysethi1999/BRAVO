@@ -91,7 +91,7 @@ tail -f /var/log/squid/access.log</code></p>
 <p>3. Execute installation script</p>
 <p><code class="language-plaintext highligter-rouge">./l2tp.sh</code></p>
 <p>If you want to modify user settings, please use below command(s):</p>
-<p><code class="language-plaintext highligter-rouge">l2tp -a </code></p>(Add a user)
+<p><code class="language-plaintext highligter-rouge">l2tp -a </code>(Add a user)</p>
 <p><code class="language-plaintext highligter-rouge">l2tp -d (Delete a user)</code></p>
 <p><code class="language-plaintext highligter-rouge">l2tp -l (List all users)</code></p>
 <p><code class="language-plaintext highligter-rouge">l2tp -m (Modify a user password)</code></p>
