@@ -17,7 +17,7 @@ alt="https://www.tiktok.com/@littleskillcomputer?_t=8oeVIoRfhoa&_r=1" height="30
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#shadowsocks" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/shadowsocks.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#shadowsocks"/></a>
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#l2tp-server-by-teddysun" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/l2tp.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#l2tp-server-by-teddysun"/></a>
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#mtproxy-install-in-ubuntu" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/mtproxy.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#mtproxy-install-in-ubuntu"/></a>
-<a href="https://github.com/cheysethi1999/BRAVO/blob/master/images/openvpn.png" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/openvpn.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/images/openvpn.png"/></a>
+<a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#install-openvpn-server-a-single-command-by-yeasin989" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/openvpn.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#install-openvpn-server-a-single-command-by-yeasin989"/></a>
 
 
 <h1 id="socks5">install socks a single command line </h1>
