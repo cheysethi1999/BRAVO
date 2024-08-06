@@ -10,8 +10,7 @@
 alt="https://t.me/BRAVO_IThttps://t.me/BRAVO_IT" height="30" width="35" /></a>
 </p>
 <h3 align="left">Direct link below</h3>
-<a href="[https://fb.com/https://github.com/cheysethi1999/bravo.git](https://github.com/cheysethi1999/BRAVO/blob/master/photo_2024-06-30_15-55-43.jpg)" target="blank"><img align="center" src="[https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg](https://github.com/cheysethi1999/BRAVO/blob/master/photo_2024-06-30_15-55-43.jpg)" alt="https://github.com/cheysethi1999/bravo.git" height="30" width="40" /></a>
-<a href="[https://fb.com/https://github.com/cheysethi1999/bravo.git](https://github.com/cheysethi1999/BRAVO/blob/master/photo_2024-06-30_15-55-43.jpg)" target="blank"><img align="center" src="" alt="https://github.com/cheysethi1999/bravo.git" height="30" width="40" /></a>
+<a href="https://qph.cf2.quoracdn.net/main-qimg-53f9520c7e46e34bca6f92531f3ca788" target="blank"><img align="center" src="https://qph.cf2.quoracdn.net/main-qimg-53f9520c7e46e34bca6f92531f3ca788" alt="https://github.com/cheysethi1999/bravo.git" height="30" width="40" /></a>
 
 <h1 id="socks5">install socks a single command line </h1>
 <p><code class="language-plaintext highlighter-rouge">curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/socks.txt | sudo bash</code></p>
