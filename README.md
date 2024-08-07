@@ -13,7 +13,7 @@ alt="https://www.tiktok.com/@littleskillcomputer?_t=8oeVIoRfhoa&_r=1" height="30
 </p>
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/https://buymeacoffee.com/bravo_it"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="https://buymeacoffee.com/bravo_it" /></a></p><br><br>
-<p><a href="https://github.com/cheysethi1999/BRAVO/blob/master/images/photo_2024-08-07_22-05-56.jpg"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/photo_2024-08-07_22-05-56.jpg" alt="https://github.com/cheysethi1999/BRAVO/blob/master/images/photo_2024-08-07_22-05-56.jpg  /></a></p><br><br>
+
 <h3 align="left">Direct link below</h3>
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#install-socks-a-single-command-line-" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/socks.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#install-socks-a-single-command-line-"/></a>
 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#http-proxy" target="blank"><img align="center" src="https://github.com/cheysethi1999/BRAVO/blob/master/images/http.png" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#http-proxy"/></a>
