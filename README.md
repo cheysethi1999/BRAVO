@@ -71,7 +71,7 @@ curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/shadowsocks.tx
  <p>1. command line Install squid</p>
  <p><code class="language-plaintext highlighter-rouge">yum -y install squid httpd-tools</code></p>
 <p>2. command line go config file</p>
-<p><code class="language-plaintext highlighter-rouge">vim /etc/squid/squid.config</code></p>
+<p><code class="language-plaintext highlighter-rouge">vim /etc/squid/squid.conf</code></p>
 <p>3. Config follow this command line</p>
 <p><code class="language-plaintext highligter-rouge">acl lan src all
 auth_param basic program /usr/lib64/squid/basic_ncsa_auth /etc/squid/.htpasswd
