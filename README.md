@@ -107,7 +107,8 @@ tail -f /var/log/squid/access.log</code></p>
 <p>That's all enjoy your http proxy</p>
 
 <h1>L2TP Server by <a href="https://github.com/teddysun">teddysun</a></h1>
-<p>1. Install l2tp server </p>
+<p>1. Install l2tp server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" target="blank"><img align="center" src="https://thumbnail.imgbin.com/23/6/16/imgbin-button-return-s-mSaKDepmjzAignfPP9c5QrPnx_t.jpg" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" height="30" width="40" /></a></h1>
+
 <p><code class="language-plaintext highligter-rouge">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/across/master/l2tp.sh</code></p>
 <p>2. Change to executable right restriction</p>
 <p><code class="language-plaintext highligter-rouge">chmod +x l2tp.sh</code></p>
