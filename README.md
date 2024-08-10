@@ -140,7 +140,7 @@ systemctl start systemd-timesyncd.service
 systemctl status chronyd.service
 systemctl status ntp.service</code></p>
 
-<h1>Install OPENVPN Server a single command by <a href="https://github.com/yeasin989/OPEN-VPN-ACCESS-SERVER.git">yeasin989 <a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" target="blank"><img align="right" src="https://thumbnail.imgbin.com/23/6/16/imgbin-button-return-s-mSaKDepmjzAignfPP9c5QrPnx_t.jpg" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" height="30" width="40" /></a></h1>
+<h1>Install OPENVPN Server a single command <a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" target="blank"><img align="right" src="https://thumbnail.imgbin.com/23/6/16/imgbin-button-return-s-mSaKDepmjzAignfPP9c5QrPnx_t.jpg" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" height="30" width="40" /></a></h1>
 <p>1 Openvpn free 1024 client</p>
 <p><code class="language-plaintext highligter-rouge">cd /tmp/ && yum install git -y && git clone https://github.com/yeasin989/OPEN-VPN-ACCESS-SERVER.git && cd OPEN-VPN-ACCESS-SERVER/ && sed -i -e 's/\r$//' centos7.sh && chmod 755 centos7.sh && ./centos7.sh</code></p>
 Thank You.
