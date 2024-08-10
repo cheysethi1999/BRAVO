@@ -43,7 +43,7 @@ curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/socks.txt | <s
   <li>CentOS 7 and Oracle Linux 7.5 (thanks to <a href="https://github.com/vladsf">Vlad Safronov</a>)</li>
 </ul>
 
-<h1 id="shadowsocks">shadowsocks</h1> <p><a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" target="blank"><img align="center" src="https://png.pngtree.com/element_our/20200609/ourmid/pngtree-blue-back-button-left-image_2234244.jpg" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" height="30" width="40" /></a></p>
+<h1 id="shadowsocks">shadowsocks</h1><a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" target="blank"><img align="center" src="https://png.pngtree.com/element_our/20200609/ourmid/pngtree-blue-back-button-left-image_2234244.jpg" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" height="30" width="40" /></a>
 
 <p><code class="language-plaintext highlighter-rouge">curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/shadowsocks.txt | sudo bash</code></p>
 
