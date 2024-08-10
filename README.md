@@ -66,7 +66,8 @@ curl https://raw.githubusercontent.com/cheysethi1999/BRAVO/master/shadowsocks.tx
   <li>Ubuntu 18.04 Bionic</li>
   <li>CentOS 7 and RHEL 7 (thanks to Octavian Dodita octavian2204[anti-spam-dog]gmail.com )</li>
 </ul>
- <h1 id="HTTP Proxy">HTTP Proxy</h1>
+ <h1 id="HTTP Proxy">HTTP Proxy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" target="blank"><img align="center" src="https://thumbnail.imgbin.com/23/6/16/imgbin-button-return-s-mSaKDepmjzAignfPP9c5QrPnx_t.jpg" alt="https://github.com/cheysethi1999/BRAVO/blob/master/README.md#direct-link-below" height="30" width="40" /></a></h1>
+
  <p>Set up squid server in Centos 7 follow command below:</p>
  <p>1. command line Install squid</p>
  <p><code class="language-plaintext highlighter-rouge">yum -y install squid httpd-tools</code></p>
