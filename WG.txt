@@ -1,54 +1,72 @@
 #!/bin/bash
 # Homepage: https://github.com/BRAVO-IT/WireGuard
 # Author: BRAVO_IT
+set -euo pipefail
 
 # Detect external IP
 function get_external_address() {
-    local addr=$(timeout 3 dig +short myip.opendns.com @resolver1.opendns.com || \
-    timeout 3 curl -s http://ipecho.net/plain || \
-    timeout 3 curl -s http://ident.me/ || \
-    timeout 3 curl -s http://whatismyip.akamai.com/)
-    [ $? -ne 0 ] && addr="<this server IP address>"
+    local addr
+    addr=$(timeout 3 dig +short myip.opendns.com @resolver1.opendns.com 2>/dev/null || \
+           timeout 3 curl -s http://ipecho.net/plain || \
+           timeout 3 curl -s http://ident.me/ || \
+           timeout 3 curl -s http://whatismyip.akamai.com/)
+    [ -z "$addr" ] && addr="<this server IP address>"
     echo "$addr"
 }
 
 # Detect external interface
 function get_external_iface() {
-    ip route get 8.8.8.8 | grep -oP '(?<=dev )\S+'
+    ip route get 8.8.8.8 | grep -oP '(?<=dev )\S+' | head -n1
 }
 
-# Generate WireGuard keys
+# Generate WireGuard keys (idempotent - won't overwrite existing keys)
 function generate_keys() {
     umask 077
-    wg genkey | tee /etc/wireguard/server_private.key | wg pubkey > /etc/wireguard/server_public.key
-    wg genkey | tee /etc/wireguard/client_private.key | wg pubkey > /etc/wireguard/client_public.key
+    if [ ! -f /etc/wireguard/server_private.key ]; then
+        wg genkey | tee /etc/wireguard/server_private.key | wg pubkey > /etc/wireguard/server_public.key
+    fi
+    if [ ! -f /etc/wireguard/client_private.key ]; then
+        wg genkey | tee /etc/wireguard/client_private.key | wg pubkey > /etc/wireguard/client_public.key
+    fi
 }
 
 # Generate server config
+# NOTE: NAT/MASQUERADE is handled here via PostUp/PostDown only.
+# configure_firewall() no longer duplicates this rule.
 function generate_server_config() {
+    local ext_iface
+    ext_iface=$(get_external_iface)
+
 cat > /etc/wireguard/wg0.conf <<EOF
 [Interface]
 Address = 10.0.0.1/24
 ListenPort = $PORT
 PrivateKey = $(cat /etc/wireguard/server_private.key)
 MTU = 1420
-
 # Performance tuning
 PostUp   = sysctl -w net.ipv4.ip_forward=1
 PostUp   = sysctl -w net.ipv6.conf.all.forwarding=1
-PostUp   = iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -o $(get_external_iface) -j MASQUERADE
-PostDown = iptables -t nat -D POSTROUTING -s 10.0.0.0/24 -o $(get_external_iface) -j MASQUERADE
+PostUp   = iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -o $ext_iface -j MASQUERADE
+PostDown = iptables -t nat -D POSTROUTING -s 10.0.0.0/24 -o $ext_iface -j MASQUERADE
 
 [Peer]
 PublicKey = $(cat /etc/wireguard/client_public.key)
 AllowedIPs = 10.0.0.2/32
 PersistentKeepalive = 25
 EOF
+    chmod 600 /etc/wireguard/wg0.conf
 }
 
 # Generate client config
+# Written to the invoking user's home directory (not /etc/wireguard) so it can
+# be downloaded via SFTP/file manager without root access.
 function generate_client_config() {
-cat > /etc/wireguard/client.conf <<EOF
+    local target_user target_home
+    target_user="${SUDO_USER:-ubuntu}"
+    target_home=$(getent passwd "$target_user" | cut -d: -f6)
+    target_home="${target_home:-/home/ubuntu}"
+
+cat > "$target_home/client.conf" <<EOF
 [Interface]
 Address = 10.0.0.2/32
 PrivateKey = $(cat /etc/wireguard/client_private.key)
@@ -58,51 +76,65 @@ MTU = 1420
 [Peer]
 PublicKey = $(cat /etc/wireguard/server_public.key)
 Endpoint = $(get_external_address):$PORT
-AllowedIPs = 0.0.0.0/0, ::/0
+AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 25
 EOF
+    chown "$target_user":"$target_user" "$target_home/client.conf"
+    chmod 600 "$target_home/client.conf"
+    echo "Client config written to: $target_home/client.conf"
 }
 
-# Firewall rules
+# Firewall rules (ufw port + forwarding only; NAT lives in wg0.conf PostUp/PostDown)
 function configure_firewall() {
-    local iface=$(get_external_iface)
-
-    if which ufw > /dev/null; then
+    if which ufw > /dev/null 2>&1; then
         ufw allow "$PORT"/udp
-        if ! grep -q "WireGuard NAT" /etc/ufw/before.rules; then
-            sed -i "1i # WireGuard NAT rules\n*nat\n:POSTROUTING ACCEPT [0:0]\n-A POSTROUTING -s 10.0.0.0/24 -o $iface -j MASQUERADE\nCOMMIT\n" /etc/ufw/before.rules
+
+        # Allow forwarding of VPN traffic - ufw drops FORWARD chain by default
+        if grep -q '^DEFAULT_FORWARD_POLICY="DROP"' /etc/default/ufw; then
+            sed -i 's/^DEFAULT_FORWARD_POLICY="DROP"/DEFAULT_FORWARD_POLICY="ACCEPT"/' /etc/default/ufw
         fi
+
         ufw reload
     else
-        iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -o "$iface" -j MASQUERADE
+        echo "ufw not found; relying on NAT rule from wg0.conf PostUp/PostDown."
+        echo "Make sure your distro's default FORWARD policy allows this traffic."
     fi
 }
 
-# Enable IP forwarding + performance tuning
+# Enable IP forwarding + performance tuning (idempotent - no duplicate lines)
 function enable_ip_forwarding() {
-    echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
-    echo "net.ipv6.conf.all.forwarding=1" >> /etc/sysctl.conf
-    echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-    echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+    local sysctl_conf="/etc/sysctl.conf"
+    declare -a lines=(
+        "net.ipv4.ip_forward=1"
+        "net.ipv6.conf.all.forwarding=1"
+        "net.core.default_qdisc=fq"
+        "net.ipv4.tcp_congestion_control=bbr"
+    )
+    for line in "${lines[@]}"; do
+        grep -qxF "$line" "$sysctl_conf" || echo "$line" >> "$sysctl_conf"
+    done
     sysctl -p
 }
 
 # Defaults
-[ -z "$PORT" ] && export PORT=51820
+[ -z "${PORT:-}" ] && export PORT=51820
 
 # Install WireGuard
 if [ -e /etc/os-release ]; then
     source /etc/os-release
     if [[ "$ID" == "ubuntu" || "$ID" == "debian" ]]; then
         apt update
-        apt install -y wireguard wireguard-tools
+        apt install -y wireguard wireguard-tools dnsutils
     elif [[ "$ID" == "centos" || "$ID" == "rocky" || "$ID" == "almalinux" ]]; then
         yum install -y epel-release
-        yum install -y wireguard-tools
+        yum install -y wireguard-tools bind-utils
     else
         echo "Unsupported distribution"
         exit 1
     fi
+else
+    echo "Cannot detect OS (/etc/os-release missing)"
+    exit 1
 fi
 
 # Generate configs
@@ -114,6 +146,9 @@ configure_firewall
 
 # Enable service
 systemctl enable wg-quick@wg0
-systemctl start wg-quick@wg0
+systemctl restart wg-quick@wg0
 
 echo
+echo "WireGuard setup complete."
+echo "Server listening on UDP port $PORT"
+echo "Client config is ready for download at the path printed above."
